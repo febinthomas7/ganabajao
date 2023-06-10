@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image" href="logo.png">
+    <title>Ganabajao</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+header .sign a:nth-child(1) {
+    text-decoration: none;
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+    body{
+        display:block;
+        background-image: linear-gradient(rgb(36 36 36),rgb(14 14 14),rgba(0, 0, 0, 0.978));
+        
+    }
+    ::-webkit-scrollbar {
+    display: none;
+}
+    #b-11,#b-12,#b-13,#b-14{
+        display: none;
+    }
+    .text{
+    
+    
+    display:none;
+    
+}
+    .s-1{
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        cursor: pointer;
+    }
+    .s-1:hover i,
+    .s-1:hover p{
+        color: #ffffff;
+    }
+    .s-1 img{
+        width: 50px;
+        height: 50px;
+
+    }
+    .sidenav a{
+        text-decoration: none;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+
+    .s-1 i,.s-1 p{
+        color: rgb(182, 180, 180);
+       
+    }
+    
+    #logo{
+        font-size: 25px;
+        padding: 10px;
+        color: white;
+    }
+  
+    .s-1 i{
+
+        padding: 0px 20px 0px 10px;
+        font-size: 29px;
+    }
+
+    .sidenav a:nth-child(5) .s-1 i{
+
+        color: #425a91;
+    }
+    .sidenav a:nth-child(5) .s-1:hover i{
+
+     color: #5d73a7;
+     }
+
+    .s-1 p{
+
+        font-size: 14px;
+    }
+    footer{
+        display: none;
+    }
+    header{
+        position:fixed;
+        width: -webkit-fill-available;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(0 0 0 / 42%);
+        align-items: center;
+    
+    }
+    header .sign{
+       display: flex;
+       margin-right: 30px;
+    
+    }
+    header .sign div{
+       padding: 15px 20px;
+       color: white;
+       text-align: center;
+       cursor: pointer;
+       
+    
+    }
+    header .sign div:nth-child(1){
+      color: rgb(159, 159, 159);
+       
+    
+    }
+    header .sign div:nth-child(1):hover{
+      color: white;
+       
+    
+    }
+    header .sign a{
+        text-decoration: none;
+    }
+    header .sign a:nth-child(2) div{
+       background-color: #e2e2e2;
+       color: black;
+       border-radius: 50px;
+       margin-left: 10px;
+       
+       
+    
+    }
+    header .sign a:nth-child(2) div:hover{
+       background-color: white;
+       color: black;
+       transform: scale(1.1);
+       
+    
+    }
+    
+    .content .h-1{
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .content .h-2{
+       margin-top: 70px;
+    }
+
+    .sidenav{
+        width: 240px;
+        height: 100%;
+        background-color:black;
+        position: fixed;
+        top: 0;
+    }
+    .content{
+        margin-left: 240px;
+        
+        
+        
+    }
+
+    .b-1{
+        display: flex;
+        height: 260px;
+        padding: 0 10px;
+        
+    }
+    .b-1 .b a{
+        background-color:rgb(26 25 25);
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 240px;
+        text-align: center;
+        border-radius: 10px;
+        text-decoration: none;
+        
+    }
+    .b-1 .b a:hover{
+        background-color:rgba(54, 53, 53, 0.75);
+       
+        
+        
+    }
+    .b-1 .b{
+        width: 180px;
+        height: 145px;
+    }
+    .b-1 .b img{
+        width: 145px;
+        height: 145px;
+        border-radius: 5px;
+        box-shadow: 0 12px 30px 5px rgba(0.61,0.61,0.61,0.61);
+
+        
+    }
+    .b-1 .b{
+        margin-inline:auto ;
+    }
+    
+    #c{
+        display: none;
+    }
+    #h-11{
+        display: none;
+    }
+    .content .A{
+        padding: 26px;
+        
+    }
+    .content .A p{
+        color: white;
+    }
+    .content .b p{
+        color: #c3b4b4;
+        font-size: 13px;
+        width: 140px;
+        text-align: left;
+        margin-top: 20px;
+        line-height: 23px;
+    }
+    @media(max-width:1024px){
+        
+    .b-1 {
+    
+    overflow-x: auto;
+    gap: 14px;
+}
+.sidenav {
+    width: 215px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+}
+.b-1::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.b-1 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.content {
+    margin-left: 215px;
+}
+
+}
+@media(max-width:768px){
+    .content {
+    margin-left: 209px;
+}
+
+header .sign {
+    
+    margin-right: 10px;
+}
+.sidenav {
+    width: 209px;
+    
+}
+}
+
+
+@media(max-width:425px){
+    .content .b p{
+        
+        width: 163px;
+        
+    }
+
+    #b-12{
+        margin-bottom: 60px;
+    }
+    .b-1 .b a {
+    
+        width: 145px;
+    height: 209px;
+    background-color:transparent;
+    
+}
+header .sign {
+    display: none;
+}
+header {
+    width: 100vw;
+}
+.b-1 .b{
+        margin-inline:10px ;
+        width: 164px;
+    height: 226px;
+    }
+ 
+    .content {
+    margin-left: 0px;
+}
+#c{
+    display:flex;
+    padding: 10px 10px 10px 20px;
+    position: -webkit-sticky; /* for browser compatibility */
+  position: sticky;
+  top: 0px;
+ 
+}
+#c div{
+    display: flex;
+    background-color:#262626;
+   
+}
+.content .A {
+    padding: 0px;
+    background-color: transparent;
+}
+.b-1 {
+    display: flex;
+    height: 300px;   
+    padding: 0 0 0 10px;
+}
+.content .b p {
+    
+    
+    margin-top: 0px;
+    padding:0 10px;
+   
+}
+    body{
+        display: block;
+        background-image: linear-gradient(rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0));
+    }
+    .sidenav{
+        display: none;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding:15px 15px 5px 15px;
+        align-items: center;
+        background-color: black;
+        position: initial;
+        
+    }
+    header p
+    {
+        font-size:24px ;
+        position: static;
+        padding: 10px;
+    }
+    #bell,
+    #time,
+    #settings{
+        font-size: 22px;
+        margin-left: 18px;
+        color: white;
+        
+    }
+    #h-11{
+        display: initial;
+        padding: 0 10px;
+    }
+    .A{
+
+        font-size: 20px;
+        color: white;
+    }
+    section{
+        display: flex;
+        padding: 15px;
+    }
+    section img{
+       width: 125px;
+       height: 125px;
+       border-bottom: 10px solid rgb(217, 81, 81);
+    }
+    
+    section div{
+        padding: 10px 10px 10px 10px ;
+        color: aliceblue;
+        border-radius: 50px;
+        background-color:#54525275;
+        font-size: 13px;
+        margin-right: 0px;
+    }
+    .b{
+        background-color: transparent;
+        width: 550px;
+        padding: 0px;
+        margin: 0px;
+        
+        
+    }
+    /* section 1 */
+    .b:nth-child(1) img{
+        border-bottom: 10px solid #a2a59e;
+    }
+    .b:nth-child(1) .text{
+        border-left:10px solid #a2a59e;
+    }
+
+    .b:nth-child(2) img{
+        border-bottom: 10px solid rgb(217, 81, 81);
+    }
+    .b:nth-child(2) .text{
+        border-left:10px solid rgb(217, 81, 81);
+    }
+
+
+    .b:nth-child(3) img{
+
+        border-bottom: 10px solid rgb(229, 178, 218);
+    } 
+    .b:nth-child(3) .text{
+
+        border-left: 10px solid rgb(229, 178, 218);
+    } 
+            
+    
+    .b:nth-child(4) img{
+
+        border-bottom: 10px solid rgb(105, 105, 171);
+    }
+    .b:nth-child(4) .text{
+
+        border-left: 10px solid rgb(105, 105, 171);
+    }
+        
+    
+    .b:nth-child(5) img{
+        border-bottom: 10px solid rgb(197, 206, 68);
+    }
+    .b:nth-child(5) .text{
+        border-left: 10px solid rgb(197, 206, 68);
+    }
+
+
+    .b:nth-child(6) img{
+        border-bottom: 10px solid rgb(224, 159, 122);
+    }
+    .b:nth-child(6) .text{
+        border-left: 10px solid rgb(224, 159, 122);
+    }
+
+    .b:nth-child(7) img{
+        border-bottom: 10px solid rgb(186 122 224);
+    }
+    .b:nth-child(7) .text{
+        border-left: 10px solid rgb(186 122 224);
+    }
+    .b:nth-child(8) img{
+        border-bottom: 10px solid rgb(224, 159, 122);
+    }
+    .b:nth-child(8) .text{
+        border-left: 10px solid rgb(224, 159, 122);
+    }
+
+
+    
+
+
+
+
+
+    .b a{
+        text-decoration: none;
+    }
+    .b div{
+        background-color: transparent;
+    }
+    .b p{
+        margin: 0px;
+        font-size: 14px;
+        color:#cfc2c2;
+       
+    }
+    .b-1{
+        overflow-x: auto;
+        width: 100%;
+        height:230px;
+    }
+::-webkit-scrollbar {
+    display: none;
+}
+
+footer div{
+    color: #818181;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.active{
+    color: white;
+}
+
+footer{
+    
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: rgb(0 0 0 / 75%);
+    align-items: center;
+}
+footer i{
+   
+   padding: 5px;
+   
+}
+.c{
+    width: 100%;
+    position:sticky;
+}
+
+#c{
+    background-color:rgb(0 0 0);
+    
+    z-index: 1;
+}
+#c div{
+    margin-right: 10px;
+}
+#m1,
+.m2,
+.m3{
+    background-color: transparent;
+    padding-top: 10px;
+}
+.music{
+    background-color: #80cbc2;
+    margin: 0 10px;
+    padding: 0 0px;
+    position: fixed;
+    bottom: 56px;
+    border-radius: 10px;
+    align-items: center;
+    
+}
+#m1{
+    margin-right: 0;
+}
+.m3 i{
+    padding: 5px 10px 5px 0;
+    font-size: 25px;
+}
+.m3{
+    display: flex;
+    padding: 10px 0;
+}
+.m2{
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 3px;
+}
+#title{
+    font-size: 15px;
+}
+#artist{
+    font-size: 14px;
+}
+
+#bell:hover{
+    animation: rotatePlayer 1s ease ; 
+}
+@keyframes  rotatePlayer{
+    0%{transform: rotate(0deg)
+}
+50%{
+    transform: rotate(10deg);
+}
+100%{
+    transform:rotate(-10deg) ;
+}}
+
+hr{
+    display: none;
+}
+#b-11,#b-12,#b-13,#b-14{
+        display:flex;
+    }
+
+    .b-1 .b img {
+    width: 145px;
+    height: 145px;
+    border-radius: 0;
+    
+}
+.text{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    display: initial;
+    margin-bottom: 10px;
+    border-left: 6px solid #a2a59e;
+    border-radius: 0;
+    
+}
+.container{
+    position: relative;
+}
+
+
+}
+
+@media(max-width:1440px){
+    .b-1 {
+    display: flex;
+    height: 260px;
+    padding: 0 10px;
+    overflow-x: auto;
+    gap: 20px;
+}
+}
+   
+
+
+</style>
+<body>
+    <div class="sidenav">
+        <a href="ganabajao.html">
+        <div style="margin-left: 5px; margin-bottom: 20px; margin-top: 26px;" class="s-1">
+            <img src="logo.png" alt="">
+           <p id="logo">Ganabajao</p>
+        </div>
+        </a>
+        <a href="ganabajao.html">
+        <div class="s-1">
+            <div> <i class="fa fa-home"></i></div>
+            <p>Home</p>
+        </div>
+        </a>
+
+        <a href="#">
+        <div class="s-1">
+            <div> <i class="fa fa-search"></i></div>
+            <p>Search</p>
+
+        </div>
+        </a>
+       
+        <a href="#">  
+        <div class="s-1" style="margin-bottom: 40px;">
+            <div> <i class="fa fa-film"></i></div>
+            <p>YourLibrary</p>
+
+        </div>
+        </a>
+
+
+        <a href="#">
+        <div class="s-1">
+            <div><i class="fa fa-plus-square"></i></div>
+            <p>create playlist</p>
+
+        </div>
+        </a>
+        
+
+        <a href="#">
+        <div class="s-1">
+            <div><i class="fa fa-gratipay"></i></div>
+            <p>liked songs</p>
+
+        </div>
+        </a>
+        
+        
+    </div>
+
+
+
+    <div class="content">
+
+        <div class="h-1">
+            <header>
+                <div class="A"><p> Good <span id="words"></span></p></div>
+                <div id="h-11"> 
+                    <i id="bell" class="fa fa-bell-o"></i>
+                    <i id="time" class="fa fa-clock-o"></i>
+                   <a href="logout.html"><i id="settings" class="fa fa-cog"></i></a>
+                </div>
+                <div class="sign">
+                   <a href="index.html"><div>Sign up</div></a> 
+                    <a id="logout"><div>Logout</div></a>
+                </div>
+            </header>
+        </div>
+        <div class="h-2">
+            <section id="c">
+                <div>Music</div>
+                <div>Podcast & Shows</div>
+            </section>
+        
+            <h4 style="color: white; margin: 0 0 0 0 ;  padding: 20px 10px 20px 20px; font-size: 20px;">Your top mixes</h4>
+            <section class="b-1" >
+        
+                <div class="b">
+                    <a href="music1.html">
+                        <div class="container">
+                            <img src="images/papon.jpg" alt="">
+                            <div class="text">Papon</div>
+                        </div>
+                        
+                            <p>Papon Album</p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music.html">
+                        <div class="container">
+                            <img src="images/arijit.jpeg" alt="">
+                            <div class="text">arijit Singh</div>
+                        </div>
+                        
+                            <p>Arijit Singh Album</p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music2.html">
+                        <div class="container">
+                            <img src="images/KK.png" alt="">
+                            <div class="text">kk</div>
+                        </div>
+                        
+                            <p>KK Album
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music3.html">
+                        <div class="container">
+                            <img src="images/atif.jpeg" alt="">
+                            <div class="text">Atif aslam</div>
+                        </div>
+                    
+                            <p>Atif aslam album
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music4.html">
+                        <div class="container">
+                            <img src="images/kaifi khalil.jpeg" alt="">
+                            <div class="text">khaifi khalil</div>
+                            
+                        </div>
+                        
+                            <p>khaifi khalil
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">Sonu Nigam</div>
+                        </div>
+                        
+                            <p>Sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+    
+                <div class="b">
+                    <a href="music6.html">
+                        <div class="container">
+                            <img src="images/post.jpg" alt="">
+                            <div class="text">post melone</div>
+                        </div>
+                        
+                            <p>post
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+    
+                <div class="b">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                
+            </section>
+        
+            <h4 style="color: white; margin: 0 0 0 0 ;  padding: 20px 10px 20px 20px; font-size: 20px;">India's Best</h4>
+            <section class="b-1" id="b-1">
+        
+                <div class="b a">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                
+        
+                <div class="b">
+                    <a href="music2.html">
+                        <div class="container">
+                            <img src="images/KK.png" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>kk
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+
+                <div class="b">
+                    <a href="music.html">
+                        <div class="container">
+                            <img src="images/arijit.jpeg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>arijit Singh
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music3.html">
+                        <div class="container">
+                            <img src="images/atif.jpeg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                    
+                            <p>atif aslam
+                               </p>
+                    
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music4.html">
+                        <div class="container">
+                            <img src="images/kaifi khalil.jpeg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>kaifi khalil
+                               </p>
+                    
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+    
+                <div class="b">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+    
+                <div class="b">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                
+            </section>
+            
+        
+            <h4 id="b-13" style="color: white; margin: 0 0 0 0 ; padding: 20px 10px 0px 20px; font-size: 20px;">Recently played</h4>
+            <section class="b-1" id="b-11">
+        
+                <div class="b">
+                    <a href="music1.html">
+                        <div class="container">
+                            <img src="images/papon.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music.html">
+                        <div class="container">
+                            <img src="images/arijit.jpeg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                    
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music2.html">
+                        <div class="container">
+                            <img src="images/KK.png" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music3.html">
+                        <div class="container">
+                            <img src="images/atif.jpeg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music4.html">
+                        <div class="container">
+                            <img src="images/kaifi khalil.jpeg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                    
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+    
+                <div class="b">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                    
+                    </a>
+                    
+                </div>
+    
+                <div class="b">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                
+            </section>
+        
+            <h4 id="b-14" style="color: white; margin: 0 0 0 0 ; padding: 20px 10px 0px 20px; font-size: 20px;">Recommended for today</h4>
+            <section class="b-1" id="b-12">
+        
+                <div class="b">
+                    <a href="music1.html">
+                        <div class="container">
+                            <img src="images/papon.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music.html">
+                        <div class="container">
+                            <img src="images/arijit.jpeg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music2.html">
+                        <div class="container">
+                            <img src="images/KK.png" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music3.html">
+                        <div class="container">
+                            <img src="images/atif.jpeg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music4.html">
+                        <div class="container">
+                            <img src="images/kaifi khalil.jpeg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                        
+                            <p>sonu Nigam
+                               </p>
+                    
+                    </a>
+                    
+                </div>
+        
+                <div class="b">
+                    <a href="music5.html">
+                        <div class="container">
+                            <img src="images/Sonu.jpg" alt="">
+                            <div class="text">sonu Nigam</div>
+                        </div>
+                    
+                            <p>sonu Nigam
+                               </p>
+                        
+                    </a>
+                    
+                </div>
+        
+                
+            </section>
+           
+
+        </div>
+        <hr style="margin-top: 100px;width: 97%;margin-inline:auto ; margin-bottom: 150px; height:2px;border-width:0;background-color:rgb(72, 72, 72) ">
+
+    
+         
+    
+        <footer>
+            <a href="ganabajao.html">
+                <div class="active"><i style="font-size: 25px;" class="fa fa-home"></i>
+                    <div class="active">Home</div> 
+
+                </div>
+            </a>
+               
+            
+            <a href="">
+                <div><i style="font-size: 25px;" class="fa fa-search"></i>
+                    <div>Search</div> 
+                </div>
+
+            </a>
+        
+
+
+            <a href="library.html">
+
+                <div><i style="font-size: 25px;" class="fa fa-film"></i>
+                    <div>Your Library</div>
+                </div>
+            </a>
+             
+            <a href="">
+                <div><i style="font-size: 25px;" class="fa fa-clock-o"></i>
+                    <div>Premium</div> 
+                </div>
+
+            </a>
+            
+          
+        </footer>
+    </div>
+
+
+   
+
+
+    
+
+      <script type="text/javascript">
+         (function () {
+        var words = ["music","vibe","mood" ],
+        i = 0;
+        setInterval(function(){ $('#words').fadeOut(function(){
+            $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+          }); }, 3000)
+      })();
+
+
+    //   21,600,000 =6 hours
+
+      </script>
+
+
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+ import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+ 
+ import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged ,signOut } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+ const firebaseConfig = {
+     apiKey: "AIzaSyDpPSZooR0tKM-3TMtc3d6iJqiMRpBCHz0",
+     authDomain: "auth-f4e7a.firebaseapp.com",
+     databaseURL: "https://auth-f4e7a-default-rtdb.firebaseio.com",
+     projectId: "auth-f4e7a",
+     storageBucket: "auth-f4e7a.appspot.com",
+     messagingSenderId: "899522081830",
+     appId: "1:899522081830:web:55b6320e396793880e22e7",
+     measurementId: "G-T8MRJS9LXF"
+   };
+ 
+   const app = initializeApp(firebaseConfig);
+   const database = getDatabase(app);
+   const auth = getAuth();
+ 
+ 
+ 
+ 
+ 
+
+ 
+   const user = auth.currentUser;
+ onAuthStateChanged(auth, (user) => {
+   if (user) {
+     
+    console.log(user.email + " is logged in!");
+    // console.log("user");
+     // ...
+   } else {
+     // User is signed out
+     // ...
+     console.log('User is logged out!');
+    //  console.log("signed out");
+   }
+ });
+ 
+ logout.addEventListener('click',(e)=>{
+   signOut(auth).then((userCredential) => {
+   // Sign-out successful.
+   
+//    window.location.replace('login.html');
+//    alert('logged out successfully');
+
+   window.setTimeout(function(){
+
+// Move to a new location or you can do something else
+window.location.href ="login.html";
+
+}, 1000);
+ 
+ 
+ }).catch((error) => {
+   // An error happened.
+   
+     const errorCode = error.code;
+     const errorMessage = error.message;
+     alert(error.message);
+    
+   
+ });
+ 
+ })
+ 
+ 
+ </script>
+
+ <!-- <script type="text/javascript">
+   function disableBack(){
+    window.history.forward();
+   }
+   setTimeout("disableBack()",0);
+
+   window.onunload=function(){null};
+ </script> -->
+ <script type="text/javascript">
+    window.history.forward();
+    function noBack() {
+        window.history.forward();
+    }
+</script>
+       
+</body>
+</html>

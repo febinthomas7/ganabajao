@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel="icon" type="image" href="logo.png">
+    <title>Logout - Ganabajao</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+    <style>
+      
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+     }
+
+      .form{
+        
+        
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        background-color: black;
+         justify-content: center;
+        align-items: center;
+       
+      }
+      button{
+        width: 140px;
+        height: 60px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 20px;
+        border: none;
+
+      }
+      button:focus{
+        background-color: rgb(255, 255, 255);
+      }
+      
+      i{
+
+        top: 30px;
+        left: 30px;
+        color:white;
+        z-index: 2;
+        position: absolute;
+      }
+      header{
+        font-size: 30px;
+
+      }
+     
+      
+
+
+    </style>
+  
+  <body>
+    <header>
+        <a href="ganabajao.html"> <i class="fa fa-chevron-left"></i></a>
+       
+    </header>
+
+    <div class="form">
+        
+      <button type="submit"  id="logout">Logout </button>
+      </div>
+    
+
+
+<script type="module">
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,onAuthStateChanged  } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+const firebaseConfig = {
+    apiKey: "AIzaSyDpPSZooR0tKM-3TMtc3d6iJqiMRpBCHz0",
+    authDomain: "auth-f4e7a.firebaseapp.com",
+    databaseURL: "https://auth-f4e7a-default-rtdb.firebaseio.com",
+    projectId: "auth-f4e7a",
+    storageBucket: "auth-f4e7a.appspot.com",
+    messagingSenderId: "899522081830",
+    appId: "1:899522081830:web:55b6320e396793880e22e7",
+    measurementId: "G-T8MRJS9LXF"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+
+
+  
+  const user = auth.currentUser;
+ onAuthStateChanged(auth, (user) => {
+   if (user) {
+     
+    console.log(user.email + " is logged in!");
+    // console.log("user");
+     // ...
+   } else {
+     // User is signed out
+     // ...
+     console.log('User is logged out!');
+    //  console.log("signed out");
+   }
+ });
+ 
+ logout.addEventListener('click',(e)=>{
+   signOut(auth).then((userCredential) => {
+   // Sign-out successful.
+   
+//    window.location.replace('login.html');
+//    alert('logged out successfully');
+
+   window.setTimeout(function(){
+
+// Move to a new location or you can do something else
+window.location.href ="login.html";
+
+}, 1000);
+ 
+ 
+ }).catch((error) => {
+   // An error happened.
+   
+     const errorCode = error.code;
+     const errorMessage = error.message;
+     alert(error.message);
+    
+   
+ });
+ 
+ })
+ 
+
+
+
+</script>
+<script type="text/javascript">
+    window.history.forward();
+    function noBack() {
+        window.history.forward();
+    }
+</script>
+    
+  </body>
+</html>

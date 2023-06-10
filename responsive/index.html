@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel="icon" type="image" href="logo.png">
+    <title>Sign up - Ganabajao</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  </head>
+    <style>
+      html, body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      }
+      .logo{
+        display: flex;
+        justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+      }
+      .logo img{
+        width: 50px;
+        height: 50px;
+      }
+      .c-1{
+        display: none;
+      }
+      
+      form{
+        margin-top: 50px;
+      }
+      input[type=text], input[type=password],input[type=email] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      }
+      button {
+      background-color: #8ebf42;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor:pointer;
+      width: 100%;
+      }
+      h1 {
+      text-align:center;
+      font-size:18;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .formcontainer {
+      text-align: left;
+      margin: 24px 50px 12px;
+      width: 400px;
+      }
+      .container {
+      padding: 16px 0;
+      text-align:left;
+      }
+      span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+      }
+      h2 {
+        align-items: center;
+    display: flex;
+    font-size: 23px;
+    justify-content: center;
+    }
+    .login{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding: 10px;
+    }
+    .login a{
+        color: #8ebf42;
+    }
+    a{
+        text-decoration: none;
+        
+    }
+      @media(max-width:425px){
+        .form{
+        margin-top: 50px;
+      }
+
+    .formcontainer {
+        text-align: left;
+        margin: 10px;
+        width: 350px;
+    }
+
+    h2 {
+        align-items: center;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    }
+    h1 {
+    align-items: center;
+    font-size: 35px;
+    }
+    .login{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding: 10px;
+    }
+    .login a{
+        color: #8ebf42;
+    }
+    .logo {
+    
+    margin-top: 0px;
+}
+}
+    </style>
+  
+  <body>
+
+    <div class="form">
+        <div class="logo">
+        <img src="logo.png" alt="">
+        <h1>Ganabajao</h1>
+
+        </div>
+        <h2>Sign up for free to start listening.</h2>
+        
+
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="username"><strong>Username</strong></label>
+        <input type="text" id="username" placeholder="Username" name="username" oninvalid="UserName(this);"  required>
+        <label for="email"><strong>Email</strong></label>
+        <input type="email" id="email" placeholder="E-mail" name="email" oninvalid="Email(this);"  required>
+        <label for="password"><strong>Password</strong></label>
+        <input type="password" id="password" placeholder="Password" name="password"  oninvalid="Password(this);"  required>
+      </div>
+      <button type="submit" href="#" id="signUp"> Sign up</button>
+      <div class="container c-1" style="background-color: #eee">
+        <label style="padding-left: 15px">
+        <input type="checkbox"  checked="checked" name="remember"> Remember me
+        </label>
+        <span class="psw"><a href="#"> Forgot password?</a></span>
+      </div>
+      </div>
+
+      <div class="login">
+        Have an account?<a href="login.html">log in</a>.
+      </div>
+    </div>
+    <script>
+        function UserName(textbox) {
+  
+  if (textbox.value === '') {
+    textbox.setCustomValidity
+            ('enter username');
+            
+  }else {
+                textbox.setCustomValidity('');
+            }
+  
+
+  return true;
+}
+function Email(textbox) {
+  
+  if (textbox.value === '') {
+    textbox.setCustomValidity
+            ('enter email id');
+            
+  }else {
+                textbox.setCustomValidity('');
+            }
+  
+
+  return true;
+}
+function Password(textbox) {
+  
+  if (textbox.value === '') {
+      textbox.setCustomValidity
+            ('enter password');
+  }  else {
+      textbox.setCustomValidity('');
+  }
+
+  return true;
+}
+    </script>
+
+ 
+    
+  </body>
+  <script>
+    function UserName(textbox) {
+
+if (textbox.value === '') {
+textbox.setCustomValidity
+        ('enter username');
+        
+}else {
+            textbox.setCustomValidity('');
+        }
+
+
+return true;
+}
+function Email(textbox) {
+
+if (textbox.value === '') {
+textbox.setCustomValidity
+        ('enter email id');
+        
+}else {
+            textbox.setCustomValidity('');
+        }
+
+
+return true;
+}
+function Password(textbox) {
+
+if (textbox.value === '') {
+  textbox.setCustomValidity
+        ('enter password');
+}  else {
+  textbox.setCustomValidity('');
+}
+
+return true;
+}
+</script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,signOut  } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+const firebaseConfig = {
+    apiKey: "AIzaSyDpPSZooR0tKM-3TMtc3d6iJqiMRpBCHz0",
+    authDomain: "auth-f4e7a.firebaseapp.com",
+    databaseURL: "https://auth-f4e7a-default-rtdb.firebaseio.com",
+    projectId: "auth-f4e7a",
+    storageBucket: "auth-f4e7a.appspot.com",
+    messagingSenderId: "899522081830",
+    appId: "1:899522081830:web:55b6320e396793880e22e7",
+    measurementId: "G-T8MRJS9LXF"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+
+  signUp.addEventListener('click',(e)=>{
+
+    var username= document.getElementById('username').value;
+    var email= document.getElementById('email').value;
+    var password= document.getElementById('password').value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+
+    set(ref(database,'users/'+ user.uid),{
+        username: username,
+        email : email
+        
+    })
+    // alert("signed in");
+    // window.location.replace('login.html');
+    
+
+    window.setTimeout(function(){
+
+        // Move to a new location or you can do something else
+        window.location.href ="login.html";
+
+    }, 1000);
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(error.message);
+    // ..
+  });
+});
+
+
+  
+  </script>
+</html>

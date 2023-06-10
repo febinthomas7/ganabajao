@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel="icon" type="image" href="logo.png">
+    <title>Login - Ganabajao</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  </head>
+    <style>
+      html, body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      }
+      .l-1{
+        color: #5f5f5f;
+        font-weight: 500;
+        padding: 12px 60px;
+    border-radius: 30px;
+    cursor: pointer;
+   
+    border: 2px solid lightgrey;
+    }
+    .l-1:hover{
+      transform:scale(1.1);
+      transition: 0.3s ease;
+    }
+      .logo{
+        display: flex;
+        justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+      }
+      .logo img{
+        width: 50px;
+        height: 50px;
+      }
+      
+      form{
+        margin-top: 50px;
+      }
+      input[type=text], input[type=password],input[type=email] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      }
+      button {
+      background-color: #8ebf42;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor:pointer;
+      width: 100%;
+      }
+      h1 {
+      text-align:center;
+      font-size:18;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .formcontainer {
+      text-align: left;
+      margin: 24px 50px 12px;
+      width: 400px;
+      }
+      .container {
+      padding: 16px 0;
+      text-align:left;
+      }
+      span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+      }
+      h2 {
+        align-items: center;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    }
+    .login{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        font-weight: 700;
+    }
+    
+    a{
+        text-decoration: none;
+        
+    }
+      @media(max-width:425px){
+        .form{
+        margin-top: 50px;
+      }
+
+    .formcontainer {
+        text-align: left;
+        margin: 10px;
+        width: 350px;
+    }
+
+    h2 {
+        align-items: center;
+    display: flex;
+    font-size:20px;
+    justify-content: center;
+    }
+    h1 {
+    align-items: center;
+    font-size: 35px;
+    }
+    .login{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        font-weight: 700;
+    }
+    .l-1{
+        color: #5f5f5f;
+        font-weight: 500;
+        padding: 12px 60px;
+    border-radius: 30px;
+    cursor: pointer;
+   
+    border: 2px solid lightgrey;
+    }
+    .logo {
+    
+    margin-top: 0px;
+}
+}
+    </style>
+  
+  <body>
+
+    <div class="form">
+        <div class="logo">
+        <img src="logo.png" alt="">
+        <h1>Ganabajao</h1>
+
+        </div>
+        <h2>To continue, log in to Ganabajao.</h2>
+        
+
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+       
+        <label for="email"><strong>Email</strong></label>
+        <input type="email" id="email" placeholder="E-mail" name="email" oninvalid="Email(this);"  required>
+        <label for="psw"><strong>Password</strong></label>
+        <input type="password" id="password" placeholder="Password" name="psw"  oninvalid="Password(this);"  required>
+      </div>
+      <button type="submit"  id="login">login </button>
+      <div class="container" style="background-color: #eee">
+        <label style="padding-left: 15px">
+        <input type="checkbox"  checked="checked" name="remember"> Remember me
+        </label>
+        <span class="psw"><a href="#"> Forgot password?</a></span>
+      </div>
+      </div>
+
+      <div class="login">
+       <p>Don't have an account?</p>
+       <a href="index.html"><div class="l-1">SIGN UP FOR GANABAJAO</div></a>
+       
+      </div>
+    </div>
+    <script>
+        
+function Email(textbox) {
+  
+  if (textbox.value === '') {
+    textbox.setCustomValidity
+            ('enter email id');
+            
+  }else {
+                textbox.setCustomValidity('');
+            }
+  
+
+  return true;
+}
+function Password(textbox) {
+  
+  if (textbox.value === '') {
+      textbox.setCustomValidity
+            ('enter password');
+  }  else {
+      textbox.setCustomValidity('');
+  }
+
+  return true;
+}
+    </script>
+
+
+<script type="module">
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+const firebaseConfig = {
+    apiKey: "AIzaSyDpPSZooR0tKM-3TMtc3d6iJqiMRpBCHz0",
+    authDomain: "auth-f4e7a.firebaseapp.com",
+    databaseURL: "https://auth-f4e7a-default-rtdb.firebaseio.com",
+    projectId: "auth-f4e7a",
+    storageBucket: "auth-f4e7a.appspot.com",
+    messagingSenderId: "899522081830",
+    appId: "1:899522081830:web:55b6320e396793880e22e7",
+    measurementId: "G-T8MRJS9LXF"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+
+
+  login.addEventListener('click',(e)=>{
+    
+    var email= document.getElementById('email').value;
+    var password= document.getElementById('password').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+  
+
+  const dt =new Date();
+    update(ref(database,'users/'+ user.uid),{
+        last_login:dt,
+       
+        
+    })
+    // alert("logged in");
+
+    
+    
+    // window.location.replace('ganabajao.html');
+
+    window.setTimeout(function(){
+
+// Move to a new location or you can do something else
+      window.location.href ="ganabajao.html";
+
+    }, 1000);
+    
+    
+
+    
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(error.message);
+  });
+  })
+
+
+
+
+</script>
+    
+  </body>
+</html>

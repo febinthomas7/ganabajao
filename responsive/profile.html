@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>profile - Ganabajao</title>
+    <link rel="icon" type="image" href="logo.png">
+</head>
+<style>
+    *{
+        background-color: black;
+    }
+    div{
+        align-items: center;
+        display: flex;
+    flex-direction: column;
+    
+    color: white;
+    }
+     p{
+        align-items: center;
+        display: flex;
+    font-size: 14px;
+    justify-content: center;
+    margin: 0;
+    color: #b7b7b7;
+    }
+    a{
+        text-decoration: none;
+        color: aliceblue;
+    }
+    input{
+        outline: none;
+        border: none;
+        color: white;
+        margin-top: 20px;
+        width: 100%;
+    }
+    input[type="text" i] {
+    padding: 1px 2px;
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+hr{
+    
+    height: 1px;
+    
+    color: gainsboro;
+    background-color:#b7b7b7;
+    border: none;
+    width: 90%;
+}
+
+img{
+    border-radius: 50%;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.top-1{
+    margin-right: 137px;
+    font-size: 20px;
+}
+.top i{
+    font-size: 40px;
+    padding: 10px;
+}
+#image{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    background-image:url(Profile.png);
+    margin-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+
+}
+#image img{
+    height: 100%;
+    width: 100%;
+}
+</style>
+<body>
+
+    <div class="top">
+        <a href="library.html"> <i class="fa fa-angle-left"></i></a>
+       
+        <div class="top-1"> Edit profile</div>
+    </div>
+    <div>
+        
+        <div id="image"></div>
+
+
+        <label for="photo">
+            Change photo
+        </label>
+        
+
+       <input type="file" accept="image/*" id="photo" style="display: none; visibility: none;">
+
+       
+
+
+    </div>
+
+    <div>
+        <input type="text">
+   </div>
+   <hr>
+
+
+   <p>this could be your first name or a nickname.</p>
+   <p>it's how you'll appear on ganabajao.</p>
+   
+   
+   
+    
+   <script>
+
+        const image = document.getElementById("photo");
+        var upload ="";
+
+        image.addEventListener("change",function(){
+        const reader = new FileReader();
+        reader.addEventListener("load",()=>{
+        upload =reader.result; 
+        document.getElementById("image").style.backgroundImage = `url(${upload})`
+    });
+
+    reader.readAsDataURL(this.files[0])
+})
+
+   </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganabajao</title>
+    <link rel="icon" type="image" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" 
+     referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .main_div{
+        
+        background-image: linear-gradient(rgb(157 150 84),rgb(129, 135, 51),rgba(1, 3, 18, 0.927));
+        
+        
+    }
+    #nav{
+        background-color: rgb(228 248 215);
+    }
+</style>
+<body>
+    <div class="sidenav">
+        <a href="ganabajao.html">
+        <div style="margin-left: 5px; margin-bottom: 20px; margin-top: 26px;" class="sn-1">
+            <img src="logo.png" alt="">
+           <p id="logo">Ganabajao</p>
+        </div>
+        </a>
+
+        <a href="ganabajao.html">
+        <div class="sn-1">
+            <div><i class="fa fa-home"></i></div>
+            <p>Home</p>
+        </div>
+        </a>
+
+        <a href="#">
+        <div class="sn-1">
+            <div><i class="fa fa-search"></i></div>
+            <p>Search</p>
+
+        </div>
+        </a>
+       
+        <a href="#">
+        <div class="sn-1" style="margin-bottom: 40px;">
+            <div><i class="fa fa-film"></i></div>
+            <p>YourLibrary</p>
+
+        </div>
+        </a>
+
+        <a href="#">
+        <div class="sn-1">
+            <div><i class="fa fa-plus-square"></i></div>
+            <p>create playlist</p>
+
+        </div>
+        </a>
+        
+        <a href="#">
+        <div class="sn-1">
+            <div><i class="fa fa-gratipay"></i></div>
+            <p>liked songs</p>
+
+        </div>
+        </a>
+        
+        
+    </div>
+    <div class="main_div">
+        
+        <div class="music_container">
+            <div class="h-1">
+                <header id="a">
+                    <div class="A"><p> Good <span id="words"></span></p></div>
+                    <div class="sign">
+                        <a href="#"><div>Sign up</div></a> 
+                         <a id="logout"><div>Logout</div></a>
+                     </div>
+                </header>
+            </div>
+             
+
+            <div class="m">
+            <div class="a-1">
+
+                <a href="ganabajao.html"> <div><i id="a22" style="font-size: 40px;" class="fa fa-angle-down"></i></div></a>
+                <!-- <div><i id="a22" style="font-size: 25px;" class="fa fa-angle-down"></i></div> -->
+
+                <div class="a-12">
+                    <h4 style="color: rgb(232, 230, 230); font-size:17px;">PLAYING FROM PLAYLIST</h4>
+                    <h4 style="font-weight: 800;font-size:17px;">#Hindi</h4>
+                </div>
+                   
+                <a href="#"><div><i id="a23" style="font-size: 30px;" class="fa fa-ellipsis-v" aria-hidden="true"></i></div></a>
+
+            </div>
+            
+            
+            <div class="img_container">
+                <img id="img" src="kaifi/k-1.jpg"/>
+                
+                
+            </div>
+
+            <div class="a-2">
+                <div id="a20">
+                    <h4>Playlist</h4>
+                    <marquee scrollamount="4">  <h2 id="title">Kahani Suno</h2> </marquee>
+                  
+                    <h3 id="artist">Kaifi Khali</h3> 
+                </div>
+
+                <div id="a21">
+                    <i class="fa fa-heart-o" id="heart"></i>
+                </div>
+            </div>
+            </div>
+           
+            <audio src="kaifimusic/k-1.mp3" ></audio>
+                   
+
+
+            <div class="music_controls">
+                <i class="fa fa-random" id="shuffle"></i>
+                <i class="fa fa-step-backward " id="prev" title="prev" ></i>
+                <i class="fa fa-play main_button" id="play" title="play"></i>
+                <i class="fa fa-step-forward " id="next" title="Next"></i>
+                <i class="fa fa-repeat" id="repeat"></i>
+                
+            </div>
+            <div class="head">
+                <div># &emsp;Title</div>
+                <div style="margin-right: 0px;">Album</div>
+                <div style="margin-right: 30px;">date</div>
+                <div style="margin-right: 19px;"><i class="fa fa-clock-o"></i></div>
+            </div>
+            <hr>
+            
+            <div class="d-0">
+            <div class="details" >
+                <div>
+                    
+                    <div class="dd-1">
+                        
+                        <span>1</span>
+                        <img src="papon/p-1.jpg" alt="">
+                        <div>
+                            <p>Sun Zara</p>
+                            <p>Papon</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                     
+                     <div class="d-1">Sun Zara</div>
+                    
+                </div>
+                <div>
+                   
+                    <div class="d-1">1 week ago</div>
+                   
+               </div>
+               <div>
+                
+                <div class="d-1">3:20</div>
+               
+           </div>
+
+           
+            </div>
+
+            <div class="details">
+                <div>
+                    
+                    <div class="dd-1">
+                        
+                        <span>2</span>
+                        <img src="papon/p-2.jpg" alt="">
+                        <div>
+                            <p>Dard Pattharon</p>
+                            <p>Papon</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                     
+                     <div class="d-1">Dard Pattharon</div>
+                    
+                </div>
+                <div>
+                   
+                    <div class="d-1">1 week ago</div>
+                   
+               </div>
+               <div>
+               
+                <div class="d-1">3:20</div>
+               
+           </div>
+
+           
+            </div>
+
+            <div class="details">
+                <div>
+                    
+                    <div class="dd-1">
+                        
+                        <span>3</span>
+                        <img src="papon/p-3.jpg" alt="">
+                        <div>
+                            <p>Hariye Gelam</p>
+                            <p>Papon</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                     
+                     <div class="d-1">Hariye Gelam</div>
+                    
+                </div>
+                <div>
+                   
+                    <div class="d-1">1 week ago</div>
+                   
+               </div>
+               <div>
+               
+                <div class="d-1">3:20</div>
+               
+           </div>
+
+           
+            </div>
+
+            <div class="details">
+                <div>
+                    
+                    <div class="dd-1">
+                        
+                        <span>4</span>
+                        <img src="papon/p-4.jpg" alt="">
+                        <div>
+                            <p>Khamma Ghani</p>
+                            <p>Papon</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                     
+                     <div class="d-1">Khamma Ghani</div>
+                    
+                </div>
+                <div>
+                   
+                    <div class="d-1">1 week ago</div>
+                   
+               </div>
+               <div>
+               
+                <div class="d-1">3:20</div>
+               
+           </div>
+
+           
+            </div>
+
+            <div class="details">
+                <div>
+                    
+                    <div class="dd-1">
+                        
+                        <span>5</span>
+                        <img src="papon/p-5.jpg" alt="">
+                        <div>
+                            <p>Chulbuli</p>
+                            <p>Papon</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                     
+                     <div class="d-1">Chulbuli</div>
+                    
+                </div>
+                <div>
+                   
+                    <div class="d-1">1 week ago</div>
+                   
+               </div>
+               <div>
+               
+                <div class="d-1">3:20</div>
+               
+           </div>
+
+           
+            </div>
+
+            <div class="details">
+                <div>
+                    
+                    <div class="dd-1">
+                        
+                        <span>6</span>
+                        <img src="papon/p-6.jpg" alt="">
+                        <div>
+                            <p>Dost Ban Ban KE</p>
+                            <p>Papon</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                     
+                     <div class="d-1">Dost Ban Ban KE</div>
+                    
+                </div>
+                <div>
+                   
+                    <div class="d-1">1 week ago</div>
+                   
+               </div>
+               <div>
+               
+                <div class="d-1">3:20</div>
+               
+           </div>
+
+           
+            </div>
+
+            <div class="details">
+                <div>
+                    
+                    <div class="dd-1">
+                        
+                        <span>7</span>
+                        <img src="papon/p-6.jpg" alt="">
+                        <div>
+                            <p>Flowers</p>
+                            <p>Miely Cyrus</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                     
+                     <div class="d-1">Flowers</div>
+                    
+                </div>
+                <div>
+                   
+                    <div class="d-1">1 week ago</div>
+                   
+               </div>
+               <div>
+               
+                <div class="d-1">3:20</div>
+               
+           </div>
+
+           
+            </div>
+
+            <div class="details">
+                <div>
+                    
+                    <div class="dd-1">
+                        
+                        <span>8</span>
+                        <img src="images/arijit.jpeg" alt="">
+                        <div>
+                            <p>Flowers</p>
+                            <p>Miely Cyrus</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                     
+                     <div class="d-1">Flowers</div>
+                    
+                </div>
+                <div>
+                   
+                    <div class="d-1">1 week ago</div>
+                   
+               </div>
+               <div>
+               
+                <div class="d-1">3:20</div>
+               
+           </div>
+
+           
+            </div>
+
+            <div class="details">
+                <div>
+                    
+                    <div class="dd-1">
+                        
+                        <span>9</span>
+                        <img src="images/arijit.jpeg" alt="">
+                        <div>
+                            <p>Flowers</p>
+                            <p>Miely Cyrus</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                     
+                     <div class="d-1">Flowers</div>
+                    
+                </div>
+                <div>
+                   
+                    <div class="d-1">1 week ago</div>
+                   
+               </div>
+               <div>
+               
+                <div class="d-1">3:20</div>
+               
+           </div>
+
+           
+            </div>
+
+            </div>
+        </div>
+    </div>
+     <script>
+         const music = document.querySelector("audio");
+         const img = document.getElementById("img");
+         const play = document.getElementById("play");
+         const artist = document.getElementById("artist");
+         const title = document.getElementById("title");
+         const prev = document.getElementById("prev");
+         const next = document.getElementById("next");
+         
+
+          const songs = [
+           {
+              name: "k-1",
+              title: "Kahani Suno",
+              artist: "Kaifi Khali",
+              },
+              {
+                  name: "k-2",
+                  title: "Kana Yaari",
+                  artist: "Kaifi Khali",
+              }
+               
+        ];
+
+         let isplaying =false;
+
+         
+         const playmusic = () =>{
+                 
+               isplaying =true;
+               music.play();
+               play.classList.replace("fa-play","fa-pause");
+               img.classList.add("anime"); 
+           };
+        const pausemusic = () =>{
+               
+               isplaying = false;
+               music.pause();
+               play.classList.replace("fa-pause","fa-play");
+               img.classList.remove("anime"); 
+           };
+           play.addEventListener("click",()=> {
+               isplaying ? pausemusic() : playmusic();  
+            });
+
+
+
+
+             const loadsong = (songs) => {
+                title.textContent = songs.title;
+                artist.textContent = songs.artist;
+                music.src ="kaifimusic/"  + songs.name +".mp3";
+                img.src = "kaifi/" + songs.name +".jpg";
+             
+            };
+            
+            
+            songIndex =[];
+            const nextsong = () =>{
+                songIndex = (songIndex + 1)% songs.length;
+                loadsong(songs[songIndex]);
+                playmusic();
+            };
+            const prevsong = () =>{
+                songIndex = (songIndex - 1 + songs.length) % songs.length;
+                loadsong(songs[songIndex]);
+                playmusic();
+            };
+            next.addEventListener("click", nextsong);
+            prev.addEventListener("click",prevsong); 
+          
+       
+     </script>
+
+<script >
+    const a22= document.getElementById('a22');
+    const up= document.getElementById('up');
+    const nav= document.getElementById('nav');
+
+    if(a22){
+        a22.addEventListener('click',()=>{
+            nav.classList.add('active');
+        })
+    }
+    if(up){
+        up.addEventListener('click',()=>{
+            nav.classList.remove('active');
+        })
+    }
+    
+
+
+</script>
+<script>
+    const logo = document.getElementById('a')
+ 
+ const getOffset = () => {
+   if(window.pageYOffset > 200){
+      logo.style.backgroundColor = 'rgb(181 188 78)'
+      logo.style.transition = 'background .5s ease-out'
+      logo.style.boxShadow = '0px 1px 4px black'
+   }
+   if(window.pageYOffset < 200){
+      logo.style.backgroundColor = 'rgba(0,0,0,0.5)'
+      logo.style.transition = 'background .5s ease-out'
+      logo.style.boxShadow = 'none' 
+   }
+ }
+ 
+ window.addEventListener('scroll', getOffset)
+ </script>
+ <script type="text/javascript">
+    (function () {
+   var words = ["music","vibe","mood" ],
+   i = 0;
+   setInterval(function(){ $('#words').fadeOut(function(){
+       $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+     }); }, 3000)
+ })();
+
+
+//   21,600,000 =6 hours
+
+ </script>
+ <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+ import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+ 
+ import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged ,signOut } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+ const firebaseConfig = {
+     apiKey: "AIzaSyDpPSZooR0tKM-3TMtc3d6iJqiMRpBCHz0",
+     authDomain: "auth-f4e7a.firebaseapp.com",
+     databaseURL: "https://auth-f4e7a-default-rtdb.firebaseio.com",
+     projectId: "auth-f4e7a",
+     storageBucket: "auth-f4e7a.appspot.com",
+     messagingSenderId: "899522081830",
+     appId: "1:899522081830:web:55b6320e396793880e22e7",
+     measurementId: "G-T8MRJS9LXF"
+   };
+ 
+   const app = initializeApp(firebaseConfig);
+   const database = getDatabase(app);
+   const auth = getAuth();
+ 
+ 
+ 
+ 
+ 
+
+ 
+   const user = auth.currentUser;
+ onAuthStateChanged(auth, (user) => {
+   if (user) {
+     
+     
+    console.log("user");
+     // ...
+   } else {
+     // User is signed out
+     // ...
+     console.log("signed out");
+   }
+ });
+ 
+ logout.addEventListener('click',(e)=>{
+   signOut(auth).then((userCredential) => {
+   // Sign-out successful.
+   
+   window.location.replace('login.html');
+   alert('logged out successfully');
+ 
+ 
+ }).catch((error) => {
+   // An error happened.
+   
+     const errorCode = error.code;
+     const errorMessage = error.message;
+     alert(error.message);
+    
+   
+ });
+ 
+ })
+ 
+ 
+ </script>
+
+<script type="text/javascript">
+    window.history.forward();
+    function noBack() {
+        window.history.forward();
+    }
+</script>
+</body>
+</html>
